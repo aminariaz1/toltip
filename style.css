@@ -1,0 +1,59 @@
+/*.toltip{
+    position: relative;
+    display: inline-block;
+    border: 1px dotted black;
+}
+.toltiptext{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    left: 105%;
+    border-radius: 6px;
+    text-align: center;
+}
+.toltip:hover .toltiptext{
+    visibility: visible;
+}
+ */
+
+    .toltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin: 100px;
+    }
+    
+    .toltip .toltiptext {
+        visibility: hidden;
+        position: absolute;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        margin-left: -60px;
+    }
+    
+     .toltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black  transparent;
+    }
+    
+    .toltip:hover .toltiptext {
+        visibility: visible;
+    }
+  
